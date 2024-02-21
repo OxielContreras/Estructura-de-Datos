@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int fibona(int n){
+    if (n<=1){
+        return n;
+    }
+    else{
+       return fibona(n-1)+fibona(n-2); 
+    }
+}
+int main()
+{
+    int n,i;
+    cout<<"Recursividad fibonacci"<<endl;
+    cout<<"Ingrese un numero: ";cin>>n;
+   
+    cout<<"El termino "<<n<<" en la serie fibonacci es "<<fibona(n)<<endl;
+    
+
+    return 0;
+}
