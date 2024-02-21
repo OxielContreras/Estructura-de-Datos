@@ -1,0 +1,26 @@
+#Autor: Oxiel Rodrigo Contreras Pehco
+#Fecha: 21/02/2024
+#Version: Version 1
+def factorial_recursivo(n):
+    if n==1:
+        return 1
+    else:
+        return n* factorial_recursivo(n-1)
+z=factorial_recursivo(5) #120
+
+def potencia(base, exponente):
+    if exponente == 0:
+        return 1
+    elif exponente ==1:
+        return base
+    else:
+        return base*potencia(base,exponente -1)
+print(z)
+print("Hola Mundo")
+
+base = float(input("Ingresa la base:"))
+exponente =int(input("ingresa el exponente: "))
+
+
+resultado =potencia(base,exponente)
+print("El resultado de", base, "elavado a la", exponente,"es:", resultado)
