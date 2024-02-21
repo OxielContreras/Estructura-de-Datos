@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+//recursividad de una potencia
+int Potencia(int n,int m);
+int main()
+{
+    int n, m;
+    cout<<"Ingrese la base: "; cin>>n;
+    cout<<"Ingrese la potencia "; cin>>m;
+    cout<<"El resultado es el siguiente numero: "<<Potencia(n,m)<<endl;
+    
+    return 0;
+}
+int Potencia(int n,int m){
+    
+    if(n==0){
+        return 1;
+    }
+    else{
+        return n*Potencia(m-1,n);
+    }
+}
