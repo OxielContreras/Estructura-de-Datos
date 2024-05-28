@@ -1,0 +1,55 @@
+/**
+ * Ecuación cuadrática
+ * OXIEL CONTRERAS
+ */
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    float a, b, c, discriminante, x1, x2, parteReal, parteImaginaria;
+    cout << "Ingrese los coeficientes de su ecuación cuadrática" << endl;
+    cout << "Coeficiente de x²: ";
+    cin >> a;
+    cout << "Coeficiente de x: ";
+    cin >> b;
+    cout << "Término constante: ";
+    cin >> c;
+
+    if (a == 0)
+    {
+        cout << "Su operación no es cuadrática, pero este es su resultado de x: ";
+        x1 = -c / b;
+        cout << x1 << endl;
+    }
+    else
+    {
+        discriminante = pow(b, 2) - 4 * a * c;
+        if (discriminante == 0)
+        {
+            cout << "La solución única de x es: ";
+            x1 = -b / (2 * a);
+            cout << x1 << endl;
+        }
+        else if (discriminante > 0)
+        {
+            x1 = (-b + sqrt(discriminante)) / (2 * a);
+            x2 = (-b - sqrt(discriminante)) / (2 * a);
+            cout << "Sus respuestas son: " << endl;
+            cout << "x1: " << x1 << endl;
+            cout << "x2: " << x2 << endl;
+        }
+        else
+        {
+            cout << "El resultado es imaginario, pero estos son los resultados: " << endl;
+            parteReal = -b / (2 * a);
+            parteImaginaria = sqrt(-discriminante) / (2 * a);
+            cout << "x1: " << parteReal << " + " << parteImaginaria << "i" << endl;
+            cout << "x2: " << parteReal << " - " << parteImaginaria << "i" << endl;
+        }
+    }
+
+    return 0;
+}
