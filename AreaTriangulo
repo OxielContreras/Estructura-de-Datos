@@ -1,0 +1,37 @@
+// Oxiel Contreras
+#include <iostream>
+using namespace std;
+
+// Prototipo de la función para calcular el área del triángulo.
+float calcularArea(float base, float altura);
+
+int main() {
+    long base, altura;
+
+    // Solicitar la base del triángulo.
+    cout << "Ingrese la base del triángulo (valor positivo): ";
+    do {
+        cin >> base;
+        if (base <= 0) {
+            cout << "Por favor, ingrese un valor positivo para la base: ";
+        }
+    } while (base <= 0);
+
+    // Solicitar la altura del triángulo.
+    cout << "Ingrese la altura del triángulo (valor positivo): ";
+    do {
+        cin >> altura;
+        if (altura <= 0) {
+            cout << "Por favor, ingrese un valor positivo para la altura: ";
+        }
+    } while (altura <= 0);
+
+    // Mostrar el área del triángulo.
+    cout << "El área del triángulo es: " << calcularArea(base, altura) << endl;
+    return 0;
+}
+
+// Función para calcular el área del triángulo.
+float calcularArea(float base, float altura) {
+    return (base * altura) / 2;
+}
